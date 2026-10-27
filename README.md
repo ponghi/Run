@@ -1,19 +1,36 @@
 # RUN — Alpha Roma
 
-Prototipo navigabile, gratuito per gli atleti, di un programma premi per runner. Un solo file `index.html`, senza dipendenze o build. Aprirlo nel browser oppure servirlo con `python -m http.server 8000` dalla radice del repository. GitHub Pages pubblica il ramo `main`, cartella root.
+Prototipo per runner e commercianti locali: punti ottenuti correndo, premi geolocalizzati e rimborsi da un fondo condiviso. Tutti i dati e i pagamenti sono simulati. Non utilizzabile per denaro reale.
 
-## Esperienza dimostrativa
+## Avvio
 
-- Profilo di Manuel, modificabile; città pilota Roma.
-- Zone iniziali: Monteverde, Flaminio/Ponte Milvio, EUR. Sono ipotesi per il mockup, non una copertura commerciale già disponibile.
-- Corsa simulata, senza registrazione GPS, e conversione dimostrativa di 100 punti/km. I punti non sono denaro.
-- Premi di commercianti inventati, ordinati per distanza in linea d'aria. Centro del quartiere come riferimento predefinito; posizione reale facoltativa su richiesta (richiede HTTPS o localhost).
-- Filtri per raggio e fascia punti, condizioni visibili prima dell'emissione del codice.
-- Il codice scala i punti, scade dopo 30 giorni e resta nel wallet. Una richiesta per premio per profilo locale. Non esiste ancora la convalida del commerciante e nessun voucher ha valore commerciale.
-- Profilo, saldo e voucher restano nel localStorage del browser. La posizione non viene salvata né inviata a un backend. Nessun account o sincronizzazione tra dispositivi. Il reset cancella i dati demo.
+Dalla radice: `python -m http.server 8000`, poi aprire la pagina servita nel browser. Nessuna installazione o build per l’app. GitHub Pages pubblica `index.html` e `model.js` da `main`, cartella root. Usare il checkout esistente: non servono worktree.
 
-## Ipotesi di business da validare
+## Cosa provare
 
-Lancio concentrato su quartieri e percorsi di corsa, con commercianti nelle vicinanze. Premi finanziati dai partner e con disponibilità e condizioni controllate. Ricavo principale proposto: quota annuale B2B; prezzi e accordi non ancora definiti. Eventuali commissioni future vanno legate all'utilizzo verificato del voucher, non alla sola emissione.
+1. **Corri**: corsa simulata, 100 punti/km, nessuna registrazione GPS reale.
+2. **Premi**: attività inventate a Monteverde, Flaminio/Ponte Milvio ed EUR; distanza in linea d’aria dal quartiere o dalla posizione facoltativa. Sedi e offerte non corrispondono ad accordi reali.
+3. **Wallet**: punti e codici; emettere un codice riserva il contributo del fondo. Annullamento/scadenza restituiscono punti e disponibilità.
+4. **Partner**: scegliere lo stesso partner del voucher, inserire codice, riferimento acquisto e totale prima del voucher; confermare condizioni e verificare. Simulare liquidazione o reso totale.
+5. **Fondo** (dall’area Partner): ripartizione 75/15/10, riserve, rimborsi e rifinanziamento demo. Simulatore economico indipendente dai saldi, con margine, incrementalità, concentrazione e costi RUN modificabili.
 
-Prima di un pilota reale servono partner effettivi, autenticazione, backend per saldo e voucher, verifica monouso lato server da parte del commerciante, regole di disponibilità e scadenza, controlli delle attività e tracciamento GPS affidabile. Il mockup non dimostra l'efficacia antifrode o la sostenibilità economica.
+Ipotesi iniziale: 10 partner × 1.000 €, fondo di 7.500 €, quota app 1.500 €, investimenti 1.000 €. Durata campagna 90 giorni dalla prima apertura. Nessun tetto per singolo partner: nessun ritorno individuale garantito. I nuovi contributi seguono lo stesso split e non prolungano la campagna. Sei partner hanno offerte; quattro sono soltanto parte del finanziamento ipotetico.
+
+I voucher scadono dopo massimo 30 giorni, comunque entro fine campagna. I punti non garantiscono la disponibilità dei premi. Una richiesta per offerta, salvo annullamento o scadenza. L’area partner è aperta senza login solo per dimostrare il percorso. Nessuna scansione o prova d’acquisto reale viene verificata.
+
+I dati restano nel localStorage del browser; niente sincronizzazione tra amici, dispositivi o schede. La posizione è usata solo in memoria e non inviata a un backend. Un reset elimina i dati della demo. I profili e i punti precedenti sono conservati; i vecchi voucher vengono archiviati senza impegnare il nuovo fondo.
+
+## Validazione e documenti
+
+- `node --test tests/model.test.cjs`: contabilità in centesimi, ciclo del voucher, budget, scadenze, duplicati, rimborsi, simulazione economica.
+- `node tests/browser.cjs`: richiede Playwright e Chromium (già presenti nell’ambiente cloud); prova il percorso completo, i filtri, la migrazione e le viste mobili/desktop. `CHROMIUM_PATH` può indicare un altro eseguibile. Screenshot diagnostico in `/tmp/run-fund-mobile.png`.
+- `node scripts/generate-scenarios.cjs`: rigenera `docs/scenari.csv` dal modello.
+- `python scripts/export.py`: esporta un HTML autonomo, ZIP e documenti in `/workspace/shared/downloads`.
+
+[Piano commerciale e operativo del pilota](docs/PILOTA-ROMA.md) · [Scenari economici](docs/scenari.csv).
+
+## Limiti
+
+Il modello locale non offre protezioni finanziarie o antifrode reali: lo stato è modificabile dall’utente e non gestisce accessi concorrenti. Validazione e liquidazione sono dimostrazioni. Il reso dopo liquidazione simula il recupero immediato del contributo: nella realtà il budget deve restare impegnato fino al recupero confermato. IVA, imposte e trattamento giuridico/fiscale non sono modellati.
+
+Prima del lancio con denaro reale servono definizione contrattuale e fiscale dei flussi, regole sui residui, backend con prenotazioni atomiche, identità verificate, prove d’acquisto, pagamenti e riconciliazione. Vedere il piano pilota per requisiti e metriche.
