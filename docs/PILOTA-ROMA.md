@@ -1,75 +1,59 @@
-# RUN — proposta operativa del pilota Roma
+# RUN — modello commerciale aggiornato
 
-Documento di lavoro: ipotesi da validare, non un’offerta già sottoscritta, una previsione o un contratto. Nessun partner reale è stato acquisito e nessun capitale è stato raccolto.
+Proposta alpha, non un contratto o una raccolta già attiva. Il materiale pubblico è `cos-e-run.html` e `partner.html`.
 
-## Aggiornamento: proposta fondatori con regole di equità
+## Runner: messaggio semplice
 
-La presentazione più recente è `../partner.html`. Propone fondi per città/mercato (zona solo con sufficiente densità), 50% protetto proporzionale ai contributi, 50% competitivo e cap a scaglioni progressivi: 1,5× primi 500 €, 2× successivi 500 €, 2,5× successivi 1.000 €, 3× oltre 2.000 €. Esempio: contributo 1.000 €, cap 1.750 €. Il massimale include quota protetta e utilizzo competitivo e non è un rendimento.
+Corri → accumuli punti → converti i punti in voucher RUN → li riscatti per beni, servizi ed esperienze presso i partner della città. L’accesso per gli atleti è gratuito: solo sudore e impegno. Un voucher può richiedere una spesa minima o il pagamento della differenza. Non descrivere budget e ripartizioni nel percorso informativo runner. Non promettere denaro prelevabile, premi illimitati o funzionalità GPS già operative.
 
-Queste sono regole proposte per la futura coorte. Il motore transazionale di `index.html` e gli scenari CSV descritti sotto restano la precedente simulazione con fondo unico senza cap: non dimostrano la nuova equità. Prima di una campagna vincolante occorre allineare motore, regolamento e contabilità per singolo fondo. Per il percorso a capitale ridotto e le metriche di domanda vedere `LANCIO-PARTNER.md`.
+## Perché un commerciante partecipa
 
-## Proposta commerciale precedente (simulazione di riferimento)
+Visibilità pertinente nella città, una ragione per farsi scegliere da runner con punti disponibili e risultati osservabili tramite utilizzi e acquisti. La convenienza dipende da contributo, margini, acquisti aggiuntivi e ritorni: non basta il valore dei rimborsi.
 
-«Porta nel tuo negozio i runner del quartiere. Contribuisci a un fondo comune che finanzia vantaggi sugli acquisti: il cliente usa i chilometri, tu ricevi il pagamento del cliente e il contributo previsto dal voucher.»
+Il modello RUN sostiene economicamente i voucher e struttura la partecipazione tra mercati e territori comparabili.
 
-Dieci commercianti versano 1.000 € ciascuno: 7.500 € al fondo, 1.500 € quota piattaforma, 1.000 € allocazione investimenti. Il fondo è unico: nessuno dispone individualmente di 7.500 € e non è garantito il recupero del contributo. La quota annuale è l’ipotesi di partenza del modello commerciale; il test iniziale dura 90 giorni. Le simulazioni imputano conservativamente tutto il contributo al test, senza proiettare automaticamente i risultati su un anno.
+## Budget di area
 
-Per gli atleti l’accesso è gratuito. I punti non sono denaro, non sono prelevabili e non danno diritto a premi illimitati: i voucher dipendono da disponibilità e condizioni della campagna. Regola dimostrativa 100 punti/km; nessun cambio universale punti/euro.
+Ogni budget è identificato da territorio + tipologia di attività, per esempio **Roma Sud / attrezzatura sportiva e outdoor**. Nessun trasferimento automatico tra altri territori o mercati. La partecipazione a più budget è esplicita e separata.
 
-## Ambito e reclutamento
+Ogni contributo viene ripartito sul suo valore totale:
 
-Proposta: partire da Monteverde/Villa Doria Pamphilj, con 10 attività entro una distanza utile dai percorsi di corsa. Flaminio/Ponte Milvio ed EUR restano aree da esplorare nel mockup, non quartieri già attivati.
+| Destinazione | Percentuale | Su 1.000 € |
+|---|---:|---:|
+| Costi di servizio RUN | 20% | 200 € |
+| Voucher esclusivi del partner | 40% | 400 € |
+| Quota competitiva del Budget di area | 40% | 400 € |
 
-Mix da verificare sul campo: 2 bar/forni, 2 negozi sportivi, 2 attività benessere/fitness, 2 alimentari/ristoro e 2 servizi locali pertinenti. Evitare di concentrare tutte le offerte in una categoria. La scelta deve dipendere da interesse effettivo, orari, capacità di servire i clienti e margini sostenibili.
+Il totale destinato ai voucher è l’80%: non tutto è competitivo. Dieci partner da 1.000 € nello stesso Budget di area producono 4.000 € esclusivi (400 € per partner), 4.000 € competitivi e 2.000 € servizio.
 
-Prima di raccogliere fondi: intervistare i 10 candidati su scontrino, margine, afflusso, nuovi clienti e budget commerciale; presentare anche lo scenario di rimborso nullo. Raccogliere adesioni condizionate e definire cosa accade se non si raggiunge il numero previsto. Non incassare sulla base di un rendimento promesso.
+I voucher dedicati possono essere utilizzati esclusivamente nel partner che ha versato la relativa quota. La componente competitiva può essere utilizzata presso i partner che contribuiscono al medesimo Budget di area, subordinatamente alla disponibilità e ai cap. La quota esclusiva non viene redistribuita automaticamente: durata, residui e riporto devono essere concordati prima della partecipazione.
 
-## Regole proposte per il fondo
+## Cap
 
-- Fondo competitivo, senza tetto individuale nel prototipo, coerentemente con il modello proposto. Ogni partner deve conoscere il rischio di concentrazione. Un eventuale limite futuro richiede accordo preventivo e una nuova simulazione.
-- Fondi riservati all’emissione: disponibile = fondo − codici attivi − rimborsi dovuti − rimborsi liquidati.
-- Ogni voucher indica importo fisso finanziato, spesa minima, negozio, eventuali esclusioni e scadenza. Validità massima 30 giorni e comunque entro fine campagna.
-- All’emissione si scalano i punti. Annullamento prima dell’utilizzo e scadenza ripristinano i punti e liberano la riserva. Una richiesta attiva o già utilizzata per offerta; annullati/scaduti possono essere riemessi se c’è budget.
-- Verifica dell’acquisto: codice monouso, partner corretto, scadenza, importo e condizioni, riferimento acquisto non duplicato. Questi controlli nel mockup non provano la genuinità dell’acquisto.
-- Rimborso al partner solo dopo controlli e riconciliazione. Per il pilota reale si propone una liquidazione settimanale, con tempi di contestazione e gestione resi da concordare.
-- Reso totale: stornare il contributo e restituire punti. Se il contributo è già pagato, il budget torna disponibile soltanto dopo conferma del recupero effettivo. Nel mockup il recupero è simulato come immediato. I resi parziali richiedono una regola dedicata prima del lancio reale.
-- Rifinanziamento: nella simulazione ogni nuovo contributo mantiene il 75/15/10 e non prolunga la campagna. Anche il nuovo budget è contendibile da tutti; chi rifinanzia non riceve una disponibilità esclusiva.
-- A fine campagna si completano le riconciliazioni. Il residuo non diventa automaticamente ricavo RUN: rimborso o riporto al periodo successivo devono essere disciplinati prima della raccolta. Nessun rinnovo automatico nel mockup.
+La regola confermata dall’esempio è **1.000 € → massimo 1.500 € di voucher**, cioè il 150% complessivo (incremento potenziale del 50%), non X + 150%.
 
-## Sostenibilità economica
+Proposta illustrativa per contributi superiori: 150% sui primi 1.000 €, 200% sui successivi 1.000 €, 250% sui successivi 3.000 €, 300% sulla parte oltre 5.000 €. Gli scaglioni successivi al primo sono da concordare. Cap di esempio: 500 € → 750 €; 1.000 € → 1.500 €; 2.000 € → 3.500 €; 5.000 € → 11.000 €.
 
-Ipotesi comuni: 10 partner × 1.000 €, voucher medio 10 €, scontrino 80 €, margine merce 40%, quota riscatti partner campione 10%. Costi RUN puramente illustrativi: 1.000 € fissi + 0,50 € per utilizzo, pagati dalla quota app del 15%. Non sono preventivi verificati.
+Il cap comprende voucher esclusivi e competitivi. I 400 € esclusivi non si sommano al massimale di 1.500 €. Per non emettere titoli scoperti occorre conteggiare codici attivi, rimborsi dovuti e liquidati. I cap cumulati possono superare il budget: nessun partner ha diritto a raggiungerli. Il cap limita la concentrazione; la quota esclusiva conserva accesso a capacità dedicata, non assicura incassi.
 
-| Scenario | Budget utilizzato | Acquisti davvero aggiuntivi | Acquisti associati | Vendite associate | Margine incrementale circuito meno 10.000 € | Margine partner campione meno 1.000 € | Quota app meno costi ipotizzati |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| Prudente | 60% | 25% | 450 | 36.000 € | −6.400 € | −640 € | 275 € |
-| Centrale | 80% | 50% | 600 | 48.000 € | −400 € | −40 € | 200 € |
-| Favorevole | 100% | 75% | 750 | 60.000 € | +8.000 € | +800 € | 125 € |
+## Ciclo operativo da implementare
 
-Il rimborso completa l’incasso del negoziante: NON va aggiunto di nuovo al margine sullo scontrino. Il margine incrementale stimato è vendite × margine percentuale × quota acquisti aggiuntivi. La sottrazione dei contributi è una vista economica semplificata, non un bilancio o un rendimento promesso.
+1. Identificare Budget di area e partner e attribuire il contributo alle tre destinazioni.
+2. Identificare il tipo di voucher (esclusivo o competitivo), controllare saldo punti, disponibilità della rispettiva quota e cap residuo; riservare atomicamente importo e capacità del partner.
+3. All’acquisto, verificare voucher, condizioni, identità del partner e prova d’acquisto. Il contributo completa il pagamento del runner.
+4. Riconciliare e liquidare il rimborso secondo il calendario concordato. Non conteggiare il rimborso una seconda volta come profitto.
+5. Per annullamenti/scadenze ripristinare punti e la stessa quota d’origine; non convertire automaticamente quota esclusiva in competitiva. Per resi, attendere il recupero effettivo dei contributi già liquidati prima di ripristinare disponibilità. Gestire anche resi parziali con una regola dedicata.
 
-Nel caso centrale il partner campione riceve 600 € di rimborsi ma resta a −40 € sul margine incrementale meno contributo. Il pareggio richiede circa 63 acquisti attribuiti alle condizioni ipotizzate. Con il 5% dei riscatti avrebbe 30 acquisti e −520 €; con il 25%, 150 acquisti e +1.400 €. Nel caso estremo un solo partner può assorbire tutto il budget: gli altri potrebbero ricevere zero.
+La priorità di utilizzo tra quota esclusiva e competitiva, la forma dei voucher e le condizioni di riemissione devono essere definite prima dell’attivazione, senza alterare il perimetro del budget.
 
-Capienza: 7.500 € sostengono 750 voucher da 10 €. Mille runner con punti sufficienti NON possono ricevere tutti un voucher da 10 € nello stesso fondo. Ridurre l’importo medio aumenta la capienza, ma può ridurre l’attrattiva.
+## Stato del prototipo
 
-La quota app del 15% è modesta: i margini operativi ipotizzati di 125–275 € per coorte non includono costi imprevisti. Prima del lancio vanno preventivati sviluppo, acquisizione partner, assistenza, verifiche, contabilità, infrastruttura, commissioni e gestione frodi. Il 10% investimenti è una destinazione separata da definire, non un costo già sostenuto o un rendimento per i partner. Importi del modello al netto di una definizione fiscale ancora da stabilire; IVA e imposte non sono simulate.
+`partner-model.js` e il simulatore pubblico applicano la ripartizione 20/40/40 e il nuovo cap proposto. `scenari.csv` è generato da questi calcoli e non è una previsione di ricavi.
 
-CSV riproducibile: `scenari.csv`. Il simulatore nell’app consente di modificare ipotesi e concentrazione senza cambiare i saldi del fondo dimostrativo.
+Il precedente motore transazionale `model.js` nell’app è ancora una simulazione storica 75/15/10 con budget unico, senza cap o segregazione. Non dimostra né gestisce le nuove regole. Le pagine commerciali non promettono voucher reali: prima di un circuito operativo il motore deve essere adeguato e validato.
 
-## Misure del pilota e decisione di rinnovo
+## Attivazione
 
-Misurare per partner, categoria e quartiere: runner attivi, codici emessi/utilizzati/scaduti, clienti unici, nuovi clienti dichiarati, scontrino prima del voucher, margine stimato, riacquisti, tempo al primo utilizzo, concentrazione dei rimborsi, costo di acquisizione, carico di assistenza, contestazioni e irregolarità.
+Prima di pagamenti reali servono condizioni complete: durata, quota di servizio, importi e scaglioni, perimetri territoriali e merceologici, disponibilità dedicate, residui, rifinanziamenti, liquidazioni, prove d’acquisto, resi e interruzione. Definire con professionisti contratti, fiscalità e gestione dei flussi. Costruire backend autorevole, autenticazione, verifiche e conciliazione: il localStorage della demo non è contabilità.
 
-Un codice attribuisce la transazione, non ne dimostra l’incrementalità. Stimarla con storico del negozio, domanda alla prima visita e confronto con periodi/gruppi comparabili; dichiarare l’incertezza, evitare di contare tutte le vendite come aggiuntive.
-
-Proposta di percorso: preparazione e interviste; lancio della coorte solo dopo adesioni e requisiti operativi; verifiche settimanali e confronto a 30/60/90 giorni. Non aumentare la coorte se esistono saldi non riconciliati o irregolarità irrisolte. Per il rinnovo usare distribuzione dei risultati, sostenibilità operativa e disponibilità effettiva dei partner a pagare; non solo il numero totale di voucher.
-
-## Prerequisiti prima di gestire denaro reale
-
-Il modello comporta raccolta e gestione di contributi destinati a rimborsi. Far definire a professionisti la natura contrattuale e fiscale delle quote, l’eventuale disciplina applicabile ai flussi/voucher e il ruolo di un prestatore di pagamenti. Non assumere che il termine “fondo” o “quota annuale” risolva questi aspetti.
-
-Servono contratti e regolamento: beneficiari, limiti, disponibilità, residui, rifinanziamenti, recesso, interruzione del servizio, contestazioni, resi, pagamenti e nessuna garanzia di ritorno. Servono informativa e scelte sulla posizione, minimizzazione dei dati e protezione dei percorsi che possono rivelare l’abitazione.
-
-Sul prodotto reale: backend come unica fonte autorevole, contabilità in centesimi, prenotazioni atomiche, identificazione dei partner, controlli attività sportive, acquisti verificabili, audit, richieste idempotenti e conciliazione con pagamenti reali. Vietare auto-riscatti e acquisti fittizi; valutare anomalie e prove prima di liquidare. Un acquisto genuino da parte di un cliente già acquisito può comunque non essere incrementale.
-
-Il mockup non implementa autenticazione, verifiche documentali, pagamenti, prevenzione frodi efficace, sincronizzazione o concorrenza tra browser. Non usarlo per denaro o voucher reali.
+Misurare runner attivi e interessati, utilizzi, clienti nuovi, acquisti aggiuntivi, margini, ritorni, concentrazione dei voucher, contestazioni e costi operativi. Download e punti da soli non dimostrano vendite o sostenibilità.

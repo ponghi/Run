@@ -1,7 +1,6 @@
-scenario;utilizzo_budget_pct;acquisti_aggiuntivi_pct;quota_partner_pct;voucher;vendite_associate_eur;margine_incrementale_circuito_eur;netto_circuito_dopo_contributi_eur;rimborsi_partner_eur;netto_partner_dopo_contributo_eur;quota_app_meno_costi_eur;fondo_non_utilizzato_eur
-Prudente;60;25;10;450;36000;3600;-6400;450;-640;275;3000
-Centrale;80;50;10;600;48000;9600;-400;600;-40;200;1500
-Favorevole;100;75;10;750;60000;18000;8000;750;800;125;0
-Concentrazione 5%;80;50;5;600;48000;9600;-400;300;-520;200;1500
-Concentrazione 25%;80;50;25;600;48000;9600;-400;1500;1400;200;1500
-Concentrazione 100%;100;50;100;750;60000;12000;2000;7500;11000;125;0
+contributo_partner_eur;partner_stessa_area;servizio_partner_eur;voucher_esclusivi_partner_eur;quota_competitiva_partner_eur;cap_partner_eur;totale_voucher_area_eur;competitivo_area_eur;servizio_totale_eur
+500;10;100;200;200;750;4000;2000;1000
+1000;10;200;400;400;1500;8000;4000;2000
+2000;10;400;800;800;3500;16000;8000;4000
+3000;10;600;1200;1200;6000;24000;12000;6000
+5000;10;1000;2000;2000;11000;40000;20000;10000

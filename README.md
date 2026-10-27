@@ -1,48 +1,37 @@
 # RUN — Alpha Roma
 
-Prototipo per runner e commercianti locali: punti ottenuti correndo, premi geolocalizzati e rimborsi da un fondo condiviso. Tutti i dati e i pagamenti sono simulati. Non utilizzabile per denaro reale.
+Prototipo e presentazione commerciale: chilometri → punti → voucher RUN per beni, servizi ed esperienze. Accesso gratuito proposto per gli atleti. Nessun voucher, pagamento o partner reale attivo.
 
-## Avvio
+## Pagine
 
-Dalla radice: `python -m http.server 8000`, poi aprire la pagina servita nel browser. Nessuna installazione o build per l’app. GitHub Pages pubblica `index.html` e `model.js` da `main`, cartella root. Usare il checkout esistente: non servono worktree.
+- `cos-e-run.html`: che cos’è RUN e benefici per runner e commercianti, con messaggi centrati sulla città.
+- `partner.html`: proposta B2B, Budget di area, infografica, simulatore e richiesta d’interesse.
+- `index.html`: precedente demo dell’app con corsa simulata, wallet e transazioni locali.
 
-## Cosa provare
+Avvio dalla radice: `python -m http.server 8000`. Nessuna installazione/build per il sito. GitHub Pages serve il ramo `main`, cartella root. Usare il checkout esistente; non servono worktree.
 
-1. **Corri**: corsa simulata, 100 punti/km, nessuna registrazione GPS reale.
-2. **Premi**: attività inventate a Monteverde, Flaminio/Ponte Milvio ed EUR; distanza in linea d’aria dal quartiere o dalla posizione facoltativa. Sedi e offerte non corrispondono ad accordi reali.
-3. **Wallet**: punti e codici; emettere un codice riserva il contributo del fondo. Annullamento/scadenza restituiscono punti e disponibilità.
-4. **Partner**: scegliere lo stesso partner del voucher, inserire codice, riferimento acquisto e totale prima del voucher; confermare condizioni e verificare. Simulare liquidazione o reso totale.
-5. **Fondo** (dall’area Partner): ripartizione 75/15/10, riserve, rimborsi e rifinanziamento demo. Simulatore economico indipendente dai saldi, con margine, incrementalità, concentrazione e costi RUN modificabili.
+## Modello commerciale corrente
 
-Ipotesi iniziale: 10 partner × 1.000 €, fondo di 7.500 €, quota app 1.500 €, investimenti 1.000 €. Durata campagna 90 giorni dalla prima apertura. Nessun tetto per singolo partner: nessun ritorno individuale garantito. I nuovi contributi seguono lo stesso split e non prolungano la campagna. Sei partner hanno offerte; quattro sono soltanto parte del finanziamento ipotetico.
+Ogni Budget di area è definito da territorio + tipologia di attività, per esempio Roma Sud / attrezzatura sportiva e outdoor. Il contributo si divide in **20% servizio + 40% voucher esclusivi del partner + 40% componente competitiva dell’area**. L’80% è destinato ai voucher, ma soltanto metà di esso è contendibile.
 
-I voucher scadono dopo massimo 30 giorni, comunque entro fine campagna. I punti non garantiscono la disponibilità dei premi. Una richiesta per offerta, salvo annullamento o scadenza. L’area partner è aperta senza login solo per dimostrare il percorso. Nessuna scansione o prova d’acquisto reale viene verificata.
+Esempio: 1.000 € → 200/400/400 €. Cap totale 1.500 € (150% del contributo, non +150%). Le quote esclusive sono incluse nel cap, non si sommano a esso. Il massimale è un limite, non un ricavo garantito. Gli scaglioni superiori sono proposte progressive, da concordare. Il simulatore assume partner con uguale contributo nello stesso Budget di area.
 
-I dati restano nel localStorage del browser; niente sincronizzazione tra amici, dispositivi o schede. La posizione è usata solo in memoria e non inviata a un backend. Un reset elimina i dati della demo. I profili e i punti precedenti sono conservati; i vecchi voucher vengono archiviati senza impegnare il nuovo fondo.
+`partner-model.js` contiene questi calcoli; `partner.js` gestisce il simulatore e la manifestazione d’interesse. Nessun dato del modulo viene inviato a un server: bozza email manuale a manuel.fumasonibiondi@gmail.com oppure download JSON locale. Nessuna iscrizione, pagamento o invio automatico.
 
-## Validazione e documenti
+[Piano aggiornato](docs/PILOTA-ROMA.md) · [Presentazione e acquisizione](docs/LANCIO-PARTNER.md) · [Esempi numerici](docs/scenari.csv).
 
-- `node --test tests/model.test.cjs`: contabilità in centesimi, ciclo del voucher, budget, scadenze, duplicati, rimborsi, simulazione economica.
-- `node tests/browser.cjs`: richiede Playwright e Chromium (già presenti nell’ambiente cloud); prova il percorso completo, i filtri, la migrazione e le viste mobili/desktop. `CHROMIUM_PATH` può indicare un altro eseguibile. Screenshot diagnostico in `/tmp/run-fund-mobile.png`.
-- `node scripts/generate-scenarios.cjs`: rigenera `docs/scenari.csv` dal modello.
-- `python scripts/export.py`: esporta un HTML autonomo, ZIP e documenti in `/workspace/shared/downloads`.
+## Limite della precedente app demo
 
-[Piano commerciale e operativo del pilota](docs/PILOTA-ROMA.md) · [Scenari economici](docs/scenari.csv).
+`model.js` e la parte transazionale di `index.html` restano il precedente esperimento 75/15/10 con budget unico, senza cap o segregazione. Non applicano il nuovo Budget di area. Prima di un pilota operativo occorre adeguare e verificare questo motore e sviluppare backend, autenticazione, prenotazioni atomiche, verifiche d’acquisto e pagamenti. Non usare il localStorage della demo per denaro reale.
 
-## Limiti
+La vecchia demo permette di simulare corsa, emissione, verifica, liquidazione e reso, con conservazione locale di profilo e saldi. Posizione facoltativa per la ricerca, mai inviata a un backend. La demo non è sincronizzata tra dispositivi. Resi e recuperi dopo liquidazione sono soltanto simulati.
 
-Il modello locale non offre protezioni finanziarie o antifrode reali: lo stato è modificabile dall’utente e non gestisce accessi concorrenti. Validazione e liquidazione sono dimostrazioni. Il reso dopo liquidazione simula il recupero immediato del contributo: nella realtà il budget deve restare impegnato fino al recupero confermato. IVA, imposte e trattamento giuridico/fiscale non sono modellati.
+## Verifiche e materiali
 
-Prima del lancio con denaro reale servono definizione contrattuale e fiscale dei flussi, regole sui residui, backend con prenotazioni atomiche, identità verificate, prove d’acquisto, pagamenti e riconciliazione. Vedere il piano pilota per requisiti e metriche.
+- `node --test tests/partner-model.test.cjs`: nuovo riparto, cap e riconciliazione delle quote in centesimi.
+- `node tests/partner-browser.cjs`: presentazione iPad/mobile, simulatore, scheda, bozza email senza invio e PDF. Richiede Playwright e Chromium, disponibili nell’ambiente cloud; eseguibile alternativo con `CHROMIUM_PATH`.
+- `node --test tests/model.test.cjs` e `node tests/browser.cjs`: precedente modello transazionale, non il nuovo Budget di area.
+- `node scripts/generate-scenarios.cjs`: rigenera il CSV delle condizioni commerciali correnti.
+- `python scripts/export.py`: HTML autonomi, ZIP e documenti in `/workspace/shared/downloads`.
 
-## Presentazione commerciale per iPad
-
-Aprire `partner.html` sullo stesso sito (RUN Partner), raggiungibile anche dalla home dell’app. Landing responsive e stampabile con spiegazione, esempi di domanda esplicitamente non reali, simulatore di cap progressivo e quota protetta, scheda d’interesse scaricabile e bozza email al referente, senza pagamenti o invii automatici. L’invio è manuale nel client email, non una registrazione server. `partner-model.js` calcola le condizioni proposte e `partner.js` gestisce la pagina.
-
-La landing propone il nuovo modello equo; il precedente motore transazionale `model.js` resta senza cap/segmentazione. Non usare la vecchia demo come prova dell’applicazione delle nuove regole. [Percorso di acquisizione con capitale ridotto](docs/LANCIO-PARTNER.md).
-
-Test della presentazione: `node --test tests/partner-model.test.cjs` e `node tests/partner-browser.cjs` (Playwright/Chromium dell’ambiente cloud). Verificano cap, quota protetta, domanda limitata dal budget, viste iPad/mobile, scheda locale e preparazione email senza invio.
-
-## Cos’è RUN
-
-`cos-e-run.html` presenta bisogni, benefici e percorso per runner e commercianti, con collegamenti alla demo e alla proposta partner. Pagina statica autonoma, leggibile su telefono e iPad e stampabile in PDF. Distingue visione, prototipo e circuito commerciale ancora da attivare. Inclusa nello ZIP e nell’esportazione `RUN-Cos-e.html`.
+Le pagine sono stampabili dal browser. Il sito non dichiara un bacino di utenti reale e non gestisce adesioni o raccolte vincolanti.

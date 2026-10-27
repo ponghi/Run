@@ -4,7 +4,7 @@ const select=s=>document.querySelector(s);
 function calculateTerms(){
  const form=select('#terms-form');if(!form.reportValidity())return;
  try{const fee=Math.round(Number(select('#contribution').value)*100);const t=RunPartner.terms(fee,Number(select('#cohort').value));
- select('#terms-result').innerHTML=`<p>Il tuo massimale proposto di rimborsi</p><div class="stat">${euro(t.cap)}</div><p class="warn">È un limite, non un incasso garantito.</p><div class="line"><span>Fondo premi della coorte</span><strong>${euro(t.pool)}</strong></div><div class="line"><span>Tua quota protetta di budget</span><strong>${euro(t.protectedShare)}</strong></div><div class="line"><span>Quota competitiva comune</span><strong>${euro(t.competitive)}</strong></div><p class="tiny">Con ${t.cohort} partner da ${euro(t.contribution)}. La quota protetta è parte del massimale, non si aggiunge al cap. Non è denaro a te dovuto. Accesso alla quota competitiva soggetto a disponibilità e limite residuo.</p>`;
+ select('#terms-result').innerHTML=`<h3>Il tuo contributo, in chiaro.</h3><div class="line"><span>20% · servizio RUN</span><strong>${euro(t.ownService)}</strong></div><div class="line"><span>40% · voucher esclusivi da te</span><strong>${euro(t.dedicated)}</strong></div><div class="line"><span>40% · tua quota competitiva</span><strong>${euro(t.ownCompetitive)}</strong></div><div class="line"><span>Budget competitivo con ${t.cohort} partner</span><strong>${euro(t.competitive)}</strong></div><p>Il tuo cap complessivo di voucher</p><div class="stat">${euro(t.cap)}</div><p class="warn">Massimo utilizzabile, non incasso garantito.</p><p class="tiny">Include i ${euro(t.dedicated)} esclusivi, non si aggiunge a essi. La parte competitiva dipende da disponibilità e scelte dei runner. Ipotesi: ${t.cohort} partner da ${euro(t.contribution)} nello stesso Budget di area.</p>`;
  clearDraft();select('#budget').value=select('#contribution').value;select('#interest-market').value=select('#market').value;select('#interest-zone').value=select('#zone').value;
  }catch(e){select('#terms-result').textContent=e.message}
 }
@@ -18,7 +18,7 @@ function interestPayload(){
 }
 select('#interest-form').addEventListener('submit',event=>{
  event.preventDefault();const p=interestPayload();if(!p)return;
- const body=['Buongiorno Manuel,','vorrei approfondire la proposta RUN Partner.','',`Attività: ${p.business}`,`Referente: ${p.contact||'non indicato'}`,`Email: ${p.email}`,`Mercato: ${p.market}`,`Bacino: ${p.zone}`,`Contributo indicativo: ${p.budget} EUR`,`Offerta possibile: ${p.offer||'da definire'}`,'',p.conditions].join('\n');
+ const body=['Buongiorno Manuel,','vorrei approfondire la proposta RUN Partner.','',`Attività: ${p.business}`,`Referente: ${p.contact||'non indicato'}`,`Email: ${p.email}`,`Tipologia attività: ${p.market}`,`Territorio: ${p.zone}`,`Contributo indicativo: ${p.budget} EUR`,`Offerta possibile: ${p.offer||'da definire'}`,'',p.conditions].join('\n');
  select('#email-draft').href='mailto:manuel.fumasonibiondi@gmail.com?subject='+encodeURIComponent('RUN Partner — interesse: '+p.business)+'&body='+encodeURIComponent(body);
  select('#email-draft').classList.remove('hide');select('#interest-status').textContent='Bozza preparata, non inviata. Aprila nel tuo programma email, controlla i dati e scegli se inviarla. L’invio non attiva un’iscrizione.';
 });
