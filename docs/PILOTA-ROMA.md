@@ -2,7 +2,13 @@
 
 Documento di lavoro: ipotesi da validare, non un’offerta già sottoscritta, una previsione o un contratto. Nessun partner reale è stato acquisito e nessun capitale è stato raccolto.
 
-## Proposta commerciale
+## Aggiornamento: proposta fondatori con regole di equità
+
+La presentazione più recente è `../partner.html`. Propone fondi per città/mercato (zona solo con sufficiente densità), 50% protetto proporzionale ai contributi, 50% competitivo e cap a scaglioni progressivi: 1,5× primi 500 €, 2× successivi 500 €, 2,5× successivi 1.000 €, 3× oltre 2.000 €. Esempio: contributo 1.000 €, cap 1.750 €. Il massimale include quota protetta e utilizzo competitivo e non è un rendimento.
+
+Queste sono regole proposte per la futura coorte. Il motore transazionale di `index.html` e gli scenari CSV descritti sotto restano la precedente simulazione con fondo unico senza cap: non dimostrano la nuova equità. Prima di una campagna vincolante occorre allineare motore, regolamento e contabilità per singolo fondo. Per il percorso a capitale ridotto e le metriche di domanda vedere `LANCIO-PARTNER.md`.
+
+## Proposta commerciale precedente (simulazione di riferimento)
 
 «Porta nel tuo negozio i runner del quartiere. Contribuisci a un fondo comune che finanzia vantaggi sugli acquisti: il cliente usa i chilometri, tu ricevi il pagamento del cliente e il contributo previsto dal voucher.»
 

@@ -11,6 +11,13 @@ standalone = html.replace('<script src="model.js"></script>', '<script>\n' + mod
 with zipfile.ZipFile(output / 'RUN-Alpha.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
     archive.write(root / 'index.html', 'index.html')
     archive.write(root / 'model.js', 'model.js')
-for name in ['PILOTA-ROMA.md', 'scenari.csv']:
+    for name in ['partner.html', 'partner.js', 'partner-model.js']:
+        archive.write(root / name, name)
+    for name in ['PILOTA-ROMA.md', 'LANCIO-PARTNER.md']:
+        archive.write(root / 'docs' / name, 'docs/' + name)
+partner = (root / 'partner.html').read_text().replace('<script src="partner-model.js" defer></script><script src="partner.js" defer></script>', '')
+partner = partner.replace('</body>', '<script>' + (root / 'partner-model.js').read_text() + '</script><script>' + (root / 'partner.js').read_text() + '</script></body>')
+(output / 'RUN-Partner.html').write_text(partner)
+for name in ['PILOTA-ROMA.md', 'LANCIO-PARTNER.md', 'scenari.csv']:
     (output / name).write_bytes((root / 'docs' / name).read_bytes())
 print('Esportati HTML autonomo, ZIP, piano pilota e scenari CSV.')

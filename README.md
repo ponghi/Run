@@ -34,3 +34,11 @@ I dati restano nel localStorage del browser; niente sincronizzazione tra amici, 
 Il modello locale non offre protezioni finanziarie o antifrode reali: lo stato è modificabile dall’utente e non gestisce accessi concorrenti. Validazione e liquidazione sono dimostrazioni. Il reso dopo liquidazione simula il recupero immediato del contributo: nella realtà il budget deve restare impegnato fino al recupero confermato. IVA, imposte e trattamento giuridico/fiscale non sono modellati.
 
 Prima del lancio con denaro reale servono definizione contrattuale e fiscale dei flussi, regole sui residui, backend con prenotazioni atomiche, identità verificate, prove d’acquisto, pagamenti e riconciliazione. Vedere il piano pilota per requisiti e metriche.
+
+## Presentazione commerciale per iPad
+
+Aprire `partner.html` sullo stesso sito (RUN Partner), raggiungibile anche dalla home dell’app. Landing responsive e stampabile con spiegazione, esempi di domanda esplicitamente non reali, simulatore di cap progressivo e quota protetta, scheda d’interesse scaricabile e bozza email al referente, senza pagamenti o invii automatici. L’invio è manuale nel client email, non una registrazione server. `partner-model.js` calcola le condizioni proposte e `partner.js` gestisce la pagina.
+
+La landing propone il nuovo modello equo; il precedente motore transazionale `model.js` resta senza cap/segmentazione. Non usare la vecchia demo come prova dell’applicazione delle nuove regole. [Percorso di acquisizione con capitale ridotto](docs/LANCIO-PARTNER.md).
+
+Test della presentazione: `node --test tests/partner-model.test.cjs` e `node tests/partner-browser.cjs` (Playwright/Chromium dell’ambiente cloud). Verificano cap, quota protetta, domanda limitata dal budget, viste iPad/mobile, scheda locale e preparazione email senza invio.
