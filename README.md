@@ -42,3 +42,7 @@ Aprire `partner.html` sullo stesso sito (RUN Partner), raggiungibile anche dalla
 La landing propone il nuovo modello equo; il precedente motore transazionale `model.js` resta senza cap/segmentazione. Non usare la vecchia demo come prova dell’applicazione delle nuove regole. [Percorso di acquisizione con capitale ridotto](docs/LANCIO-PARTNER.md).
 
 Test della presentazione: `node --test tests/partner-model.test.cjs` e `node tests/partner-browser.cjs` (Playwright/Chromium dell’ambiente cloud). Verificano cap, quota protetta, domanda limitata dal budget, viste iPad/mobile, scheda locale e preparazione email senza invio.
+
+## Cos’è RUN
+
+`cos-e-run.html` presenta bisogni, benefici e percorso per runner e commercianti, con collegamenti alla demo e alla proposta partner. Pagina statica autonoma, leggibile su telefono e iPad e stampabile in PDF. Distingue visione, prototipo e circuito commerciale ancora da attivare. Inclusa nello ZIP e nell’esportazione `RUN-Cos-e.html`.
