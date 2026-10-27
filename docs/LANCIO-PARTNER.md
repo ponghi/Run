@@ -2,30 +2,46 @@
 
 ## La visita con iPad
 
-Aprire `cos-e-run.html` per spiegare il bisogno e il beneficio; poi `partner.html` per la partecipazione. La prima pagina parla di città e voucher, senza descrivere ai runner i meccanismi economici. La seconda chiarisce perché aderire, Budget di area, ripartizione 20/40/40 e cap. L’infografica usa 1.000 € e dieci partner ipotetici, non adesioni reali.
+Aprire `cos-e-run.html` per i benefici del progetto e `partner.html` per la partecipazione commerciale. Il runner deve capire città, km, punti e voucher. Il partner deve capire che cosa comporta aderire, quali opportunità può contendere e quali tutele preservano una partecipazione equa.
 
-Messaggio commerciale: «I runner trasformano i chilometri in voucher RUN. La tua attività propone un’offerta; il modello sostiene il riscatto dei voucher in un mercato comparabile al tuo, proteggendo una quota dedicata e limitando la concentrazione.»
+Messaggio commerciale:
+
+> Entra nel Budget di area del tuo mercato con una fee nella fascia comune ai partner. Il 50% finanzia voucher esclusivi della tua attività. Dopo averli riscattati puoi competere per ulteriori voucher, fino a un totale massimo pari a due volte la fee, secondo domanda e disponibilità.
+
+Il 50% è una disponibilità riservata e il 2X un massimale, non ricavi assicurati. Il beneficio va valutato insieme alle vendite e al margine aggiuntivo. Non aprire il pitch con la ripartizione della quota di servizio; l’accordo dovrà comunque chiarire tutte le destinazioni.
+
+## Le regole da mostrare
+
+- Budget definito da territorio e tipologia di attività comparabile; nessun trasferimento automatico a mercati diversi.
+- Fascia A ≤ X ≤ B, con B ≤ 3A: partecipazioni proporzionate fra concorrenti. Esempio A=100 €, B=300 €.
+- 50% della fee riservato ai voucher del singolo esercizio; accesso individuale al competitivo solo dopo il riscatto di questa quota.
+- Ulteriore competitivo massimo 150% X; cap totale 2X inclusivo dell’esclusivo, soggetto alla disponibilità già finanziata.
+- Voucher da 5 € fino al 10% del valore esclusivo, cioè il 5% della fee. Con X=200 €, esclusivo 100 €, tagli 5–10 €, cap totale 400 €.
+- Disponibilità verificata e quota riservata a tempo prima di generare il codice.
+- Esclusivo non utilizzato restituito o riconosciuto come credito sulla nuova fee dopo scadenza e riconciliazione. La stessa somma non viene conteggiata due volte.
+
+Usare esempi 100/200/300 € e tenere distinti quota riservata, competitivo potenziale e cap. Non promettere che tutti possano raggiungere il massimo: il budget resta finito. Verificare anche la capienza potenziale prima di presentare il 2X come raggiungibile nella singola coorte.
 
 ## Partire con capitale ridotto
 
-- Intervistare runner e attività della città; scegliere un territorio e una tipologia comparabile con sufficiente interesse, ad esempio Roma Sud / attrezzatura sportiva e outdoor.
-- Mostrare il prototipo e raccogliere manifestazioni d’interesse non vincolanti, senza pagamenti anticipati o promesse di ritorno.
-- Verificare domanda, disponibilità dei partner e condizioni di partecipazione prima dell’accordo. Non sommare gruppi appartenenti a Budget di area diversi per far apparire una capacità competitiva inesistente.
-- Preventivare operatività, sviluppo e gestione. Capitale ridotto non significa costo zero: il 20% di servizio non è margine netto garantito e l’80% voucher non finanzia spese RUN.
-- Attivare solo dopo accordi, gestione dei flussi, capacità tecnica e controlli verificati. Nessuna raccolta reale è gestita dal sito attuale.
+Intervistare runner e attività della città; scegliere un territorio e un mercato con sufficiente interesse, ad esempio Roma Sud / attrezzatura sportiva e outdoor. Raccogliere richieste non vincolanti senza pagamenti, disponibilità a pagare e condizioni desiderate.
 
-## Manifestazione d’interesse
+Prima dell’attivazione verificare candidati reali, domanda, fascia di contributi, capienza e costi. Non sommare audience o budget di domini diversi. La quota di servizio interna del pilota è il 10%: con dieci fee da 100 € produce soltanto 100 € per RUN. Un test così leggero non finanzia automaticamente prodotto e operatività; tempo, sviluppo e acquisizione devono essere preventivati.
 
-Il modulo prepara una bozza email verso manuel.fumasonibiondi@gmail.com, da inviare manualmente nel proprio client, oppure un file JSON locale. Non attiva iscrizioni, abbonamenti o pagamenti; non raccoglie dati su un server. Se il client non è configurato, la scheda può essere allegata manualmente da Gmail. Il codice non verifica la consegna dell’email.
+Gli altri contributi restano destinati ai voucher e non finanziano spese RUN. Attivare soltanto dopo accordi completi, gestione dei flussi e capacità tecnica verificate. Il sito attuale non gestisce raccolte o voucher reali.
 
-I dati minimi sono attività, email, categoria, territorio e contributo indicativo; referente e proposta di offerta sono facoltativi. Il file va custodito. Nessun uso automatico per marketing o invio di messaggi.
+## Richiesta d’interesse
 
-## Domanda autentica come leva B2B
+Il modulo prepara una bozza email a manuel.fumasonibiondi@gmail.com da inviare manualmente nel proprio client oppure un file JSON locale. Non attiva iscrizioni, abbonamenti o pagamenti; non raccoglie dati su un server. Se il client non è configurato, la scheda può essere allegata manualmente da Gmail. Il codice non verifica la consegna dell’email.
 
-Per un successivo report commerciale contare persone uniche e recenti nella città/area pertinente: attivi, con punti sufficienti per l’offerta, interessati alla categoria, voucher richiesti, acquisti verificati. Sono fasi distinte, non valori da sommare. Ogni dato reale deve avere fonte, periodo, territorio e criterio di deduplicazione.
+Attività, email, territorio, mercato, fascia e fee sono sufficienti per l’approfondimento; referente e proposta d’offerta sono facoltativi. Custodire il file. Nessun uso automatico per marketing o invio di messaggi.
 
-I saldi e le corse simulati non sono prova della domanda. Non esporre percorsi individuali, abitazioni o contatti dei runner. La scelta di una città non dimostra residenza. Un interesse non è un ordine; la capienza reale è limitata anche dalla quota d’origine del voucher e dal cap residuo del partner.
+## Domanda autentica e risultati
 
-## Materiali
+Per un successivo report commerciale contare persone uniche e recenti nel bacino pertinente: attivi, con punti sufficienti, interessati alla categoria, voucher richiesti e acquisti verificati. Sono passaggi distinti, non valori da sommare. Ogni dato deve avere fonte, periodo, territorio e criterio di deduplicazione.
 
-`docs/PILOTA-ROMA.md` descrive il modello aggiornato. `docs/scenari.csv` riporta esempi riproducibili di contributo, quote e cap. Gli scaglioni oltre il primo sono proposte, non prezzi sottoscritti. Il vecchio motore dell’app non applica ancora il nuovo Budget di area: non usarlo come dimostrazione operativa delle regole commerciali.
+I saldi e le corse simulati non dimostrano domanda. Non esporre percorsi, abitazioni o contatti dei runner. L’interesse non è un ordine e il riscatto non prova da solo incrementalità: valutare scontrino, margine, nuovi clienti e ritorni.
+
+## Materiali e limiti
+
+`docs/PILOTA-ROMA.md` descrive le regole e il ciclo operativo. `docs/scenari.csv` riporta i casi riproducibili nella fascia 100–300 €. Le vecchie proposte 20/40/40 e cap progressivi sono superate. `model.js` nell’app resta una demo storica separata: non usarla come prova dell’applicazione delle regole correnti.
